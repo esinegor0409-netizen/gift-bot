@@ -14,7 +14,7 @@ PHONE_NUMBER = os.getenv("PHONE_NUMBER", "+79990000000")
 DB_PATH = os.getenv("DB_PATH", "gifts.db")
 
 # --- Подписка (цена в Telegram Stars) ---
-SUBSCRIPTION_STARS_PRICE = int(os.getenv("SUBSCRIPTION_STARS_PRICE", "0"))  # цена подписки в звёздах
+SUBSCRIPTION_STARS_PRICE = int(os.getenv("SUBSCRIPTION_STARS_PRICE", "20"))  # цена подписки в звёздах
 SUBSCRIPTION_DAYS = int(os.getenv("SUBSCRIPTION_DAYS", "30"))  # срок действия подписки в днях
 
 # Название твоего бота, отображается в текстах
