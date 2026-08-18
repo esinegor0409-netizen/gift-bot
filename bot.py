@@ -45,12 +45,13 @@ async def cmd_status(message: Message):
 
 @dp.message(Command("mygifts"))
 async def cmd_mygifts(message: Message):
-    if not db.is_subscribed(message.from_user.id):
-        await message.answer(
-            "🔒 Эта функция доступна только по подписке.\n"
-            "Оформите подписку: /subscribe"
-        )
-        return
+    # ВРЕМЕННО ОТКЛЮЧЕНО ДЛЯ ТЕСТА
+    # if not db.is_subscribed(message.from_user.id):
+    #     await message.answer(
+    #         "🔒 Эта функция доступна только по подписке.\n"
+    #         "Оформите подписку: /subscribe"
+    #     )
+    #     return
 
     gifts = db.get_gifts_by_owner(message.from_user.id)
     if not gifts:
@@ -63,12 +64,13 @@ async def cmd_mygifts(message: Message):
 
 @dp.message(Command("find"))
 async def cmd_find(message: Message):
-    if not db.is_subscribed(message.from_user.id):
-        await message.answer(
-            "🔒 Поиск доступен только по подписке.\n"
-            "Оформите подписку: /subscribe"
-        )
-        return
+    # ВРЕМЕННО ОТКЛЮЧЕНО ДЛЯ ТЕСТА
+    # if not db.is_subscribed(message.from_user.id):
+    #     await message.answer(
+    #         "🔒 Поиск доступен только по подписке.\n"
+    #         "Оформите подписку: /subscribe"
+    #     )
+    #     return
 
     query = message.text.replace("/find", "").strip()
     if not query:
@@ -126,3 +128,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+    
